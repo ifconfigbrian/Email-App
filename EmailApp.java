@@ -12,9 +12,14 @@ public class EmailApp {
     private String companySuffix = "batcave.com";
 
     //constructor to receive firstname and last name
-    public EmailApp(String firstName ,String lastName){
-        this.firstName = firstName;
-        this.lastName = lastName;
+    Scanner sc;
+    public EmailApp(){
+        sc = new Scanner(System.in);
+        System.out.println("Enter employees first name: ");
+        this.firstName = sc.nextLine();
+
+        System.out.print("Enter employees last name: ");
+        this.lastName = sc.nextLine();
 
         //call a method asking for department -  return department
         this.department = setDepartment();
