@@ -15,7 +15,7 @@ public class EmailApp {
     Scanner sc;
     public EmailApp(){
         sc = new Scanner(System.in);
-        System.out.println("Enter employees first name: ");
+        System.out.print("Enter employees first name: ");
         this.firstName = sc.nextLine();
 
         System.out.print("Enter employees last name: ");
@@ -37,14 +37,13 @@ public class EmailApp {
     private String setDepartment(){
         System.out.println("New worker: " + firstName + " " + lastName +
                    ".\nDepartment codes:\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\nEnter department code: ");
-        Scanner sc = new Scanner(System.in);
         int depChoice = sc.nextInt();
         if (depChoice == 1) {
-            return "Sales";   
+            return "sales";   
         } else if (depChoice == 2) {
-            return "Dev";     
+            return "dev";     
         }else if (depChoice == 3) {
-            return "Acc";      
+            return "acc";      
         }else {
             return "";
             
